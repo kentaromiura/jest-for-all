@@ -63,11 +63,10 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "src/components/(.*)$": "<rootDir>/src/components/$1.vue",
+      "src/components/([^\\.]*)$": "<rootDir>/src/components/$1.vue",
       "^vue$": "vue/dist/vue.common.js",
-      "src": "<rootDir>/src",
-      "assets": "<rootDir>/src/assets",
-      "components": "<rootDir>/src/components"
+      "src/([^\\.]*)$": "<rootDir>/src/$1.vue",
+      "(.*)/(.*)$": "$1/$2.vue"
     },
     "snapshotSerializers": [
       "<rootDir>/jest/htmlSnapshotBeautifier.js"
