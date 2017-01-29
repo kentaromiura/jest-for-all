@@ -14,7 +14,6 @@ module.exports = {
         config,
         transformOptions
       )
-      .replace(/\`/g,"\\\`")
     };
     exports.default['template']=\`${template}\`;
     `;
