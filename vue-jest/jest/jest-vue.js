@@ -3,6 +3,7 @@ const scriptRegex = /<script>([\s\S]*)<\/script>/gm;
 
 module.exports = {
   process(src, path) {
+    templateRegex.lastIndex = scriptRegex.lastIndex = 0;
     const template = templateRegex.exec(src)[1];
     return `${
       scriptRegex.exec(src)[1]
